@@ -7,7 +7,7 @@ Feature: Editing tickets
     Given there is a project called "TextMate 2"
     And that project has a ticket:
       | title           | description                   |
-      | Make it shiny! | Gradients! Starbursts! Oh my! |
+      | Make it shiny!  | Gradients! Starbursts! Oh my! |
     Given I am on the homepage
     When I follow "TextMate 2"
     And I follow "Make it shiny!"
