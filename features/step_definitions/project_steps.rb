@@ -1,5 +1,11 @@
+Then /^I should see "([^"]*)" within "([^"]*)"$/ do |content, parent|
+  within(parent) do
+    should have_content(content)
+  end
+end
+
 Given /^there is a project called "([^"]*)"$/ do |name|
-  Factory(:project, :name => name)
+  @project = Factory(:project, :name => name)
 end
 
 Given /^I am on the homepage$/ do
