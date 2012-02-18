@@ -1,7 +1,12 @@
 Ticketee::Application.routes.draw do
+
   devise_for :users
 
   root :to => "projects#index"
+
+  namespace :admin do
+    resources :users
+  end
 
   resources :projects do
     resources :tickets

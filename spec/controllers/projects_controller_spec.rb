@@ -2,11 +2,7 @@ require 'spec_helper'
 
 describe ProjectsController do
 
-  let(:user) do
-   user = Factory(:user)
-   user.confirm!
-   user
-  end
+  let(:user) { create_user! }
 
   let(:project) do
     project = Factory(:project)
@@ -29,7 +25,7 @@ describe ProjectsController do
         sign_in(:user, user)
         send(method, action.dup, :id => project.id)
         response.should redirect_to(root_path)
-        flash[:alert].should eql("You must be ad admin to do that.")
+        flash[:alert].should eql("You must be an admin to do that.")
       end
     end
   end
