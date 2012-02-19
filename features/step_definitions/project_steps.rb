@@ -35,3 +35,7 @@ end
 Then /^I should be on the project page for "([^"]*)"$/ do |name|
   project_path(Project.find_by_name!(name))
 end
+
+When /^I check "([^"]*)"$/ do |checkbox|
+  check(checkbox)
+end
