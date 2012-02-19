@@ -10,7 +10,7 @@ Feature: Hidden Links
       | admin@ticketee.com | password | true  |
     And there is a project called "TextMate 2"
 
-  Scenario: New project link is hidde nfor non-signed users
+  Scenario: New project link is hidden for non-signed users
     Given I am on the homepage
     Then I should not see the "New Project" link
 
