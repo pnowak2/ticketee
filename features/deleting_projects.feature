@@ -11,6 +11,7 @@ Feature: Deleting projects
 
   Scenario: Deleting a project
     Given there is a project called "TextMate 2"
+    And "user@ticketee.com" can view the "TextMate 2" project
     And I am on the homepage
     When I follow "TextMate 2"
     And I follow "Delete Project"
