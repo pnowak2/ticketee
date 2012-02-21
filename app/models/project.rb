@@ -8,4 +8,8 @@ class Project < ActiveRecord::Base
   }
 
   validates :name, :presence => true
+
+  def self.for(user)
+      user.admin? ? Project : Project.readable_by(user)
+  end
 end
