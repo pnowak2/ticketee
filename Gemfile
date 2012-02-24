@@ -33,6 +33,7 @@ gem 'jquery-rails'
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.5'
+  gem 'cancan'
 end
 
 group :test do
