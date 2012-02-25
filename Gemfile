@@ -34,6 +34,7 @@ gem 'jquery-rails'
 group :test, :development do
   gem 'rspec-rails', '~> 2.5'
   gem 'cancan'
+  gem 'paperclip'
 end
 
 group :test do
@@ -42,6 +43,5 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_girl'
   gem 'devise', '~> 1.4.3'
-  gem 'cancan'
   gem 'email_spec'
 end
