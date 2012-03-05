@@ -4,6 +4,12 @@ Then /^I should see "([^"]*)" within "([^"]*)"$/ do |content, parent|
   end
 end
 
+Given /^I follow "([^"]*)" within "([^"]*)"$/ do |link, parent|
+  within(parent) do
+    click_link link
+  end
+end
+
 Given /^there is a project called "([^"]*)"$/ do |name|
   @project = Factory(:project, :name => name)
 end
@@ -38,4 +44,8 @@ end
 
 When /^I check "([^"]*)"$/ do |checkbox|
   check(checkbox)
+end
+
+Then /^show me the page$/ do
+  save_and_open_page
 end
