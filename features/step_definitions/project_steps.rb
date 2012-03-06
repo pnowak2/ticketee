@@ -10,6 +10,10 @@ Given /^I follow "([^"]*)" within "([^"]*)"$/ do |link, parent|
   end
 end
 
+When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |value, field|
+  select(value, :from => field)
+end
+
 Given /^there is a project called "([^"]*)"$/ do |name|
   @project = Factory(:project, :name => name)
 end
