@@ -14,5 +14,5 @@ State.create(:name       => "Open",
              :color      => "white")
 
 State.create(:name       => "Closed",
-             :background => "#black",
+             :background => "black",
              :color      => "white")
