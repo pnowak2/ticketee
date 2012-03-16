@@ -4,6 +4,12 @@ Then /^I should see "([^"]*)" within "([^"]*)"$/ do |content, parent|
   end
 end
 
+Then /^I should not see "([^"]*)" within "([^"]*)"$/ do |content, parent|
+  within(parent) do
+    should_not have_content(content)
+  end
+end
+
 Given /^I follow "([^"]*)" within "([^"]*)"$/ do |link, parent|
   within(parent) do
     click_link link
