@@ -36,6 +36,7 @@ group :test, :development do
   gem 'cancan'
   gem 'paperclip'
   gem 'factory_girl'
+	gem 'searcher'
 end
 
 group :test do
