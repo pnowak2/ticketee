@@ -79,6 +79,9 @@ GEM
     ffi (1.0.11)
     gherkin (2.7.7)
       json (>= 1.4.6)
+    gmail (0.3.0)
+      mail (>= 2.2.1)
+      mime (>= 0.1)
     hike (1.2.1)
     i18n (0.6.0)
     jquery-rails (1.0.19)
@@ -91,6 +94,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mime (0.1)
     mime-types (1.17.2)
     multi_json (1.0.4)
     nokogiri (1.5.0)
@@ -188,6 +192,7 @@ DEPENDENCIES
   dynamic_form
   email_spec
   factory_girl
+  gmail (= 0.3.0)
   jquery-rails
   launchy
   paperclip

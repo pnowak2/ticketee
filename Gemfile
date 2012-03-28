@@ -37,6 +37,7 @@ group :test, :development do
   gem 'paperclip'
   gem 'factory_girl'
 	gem 'searcher'
+	gem 'gmail', '0.3.0'
 end
 
 group :test do
