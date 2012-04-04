@@ -2,6 +2,12 @@ Ticketee::Application.routes.draw do
 
   devise_for :users, :controllers => { :registrations => "registrations"}
 
+  namespace :api do
+    namespace :v1 do
+      resources :projects
+    end
+  end
+
   get '/awaiting_confirmation',
       :to => "users#confirmation",
       :as => 'confirm_user'
