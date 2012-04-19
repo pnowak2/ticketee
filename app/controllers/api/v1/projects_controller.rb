@@ -1,6 +1,6 @@
 class Api::V1::ProjectsController < Api::V1::BaseController
 
-  before_filter :find_project, :only => [:show]
+  before_filter :find_project, :only => [:show, :update]
 
   def index
     respond_with(Project.for(current_user))
@@ -19,10 +19,16 @@ class Api::V1::ProjectsController < Api::V1::BaseController
     respond_with(@project, :methods => "last_ticket")
   end
 
-  def find_project
-    @project = Project.for(current_user).find(params[:id])
-    rescue ActiveRecord::RecordNotFound
-      error = { :error => "The project you were looking for could not be found." }
-      respond_with(error, :status => 404)
+  def update
+    @project.update_attributes(params[:project])
+    respond_with(@project)
   end
+
+  private
+    def find_project
+      @project = Project.for(current_user).find(params[:id])
+      rescue ActiveRecord::RecordNotFound
+        error = { :error => "The project you were looking for could not be found." }
+        respond_with(error, :status => 404)
+    end
 end
