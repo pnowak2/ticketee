@@ -38,6 +38,7 @@ group :test, :development do
   gem 'factory_girl'
 	gem 'searcher'
 	gem 'gmail', '0.3.0'
+	gem 'oa-oauth', :require => 'omniauth/oauth'
 end
 
 group :test do
