@@ -13,3 +13,11 @@ end
 When /^I attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
  attach_file(field, File.expand_path(path))
 end
+
+Given /^there are (\d+) tickets for this project$/ do |number|
+  number.to_i.times do |i|
+    @project.tickets.create!(:title => "Test",
+                             :description => "Placeholder ticket.",
+                             :user => @user)
+  end
+end

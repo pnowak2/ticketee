@@ -39,6 +39,7 @@ group :test, :development do
 	gem 'searcher'
 	gem 'gmail', '0.3.0'
 	gem 'oa-oauth', :require => 'omniauth/oauth'
+	gem 'kaminari'
 end
 
 group :test do
