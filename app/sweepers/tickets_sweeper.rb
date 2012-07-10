@@ -1,5 +1,5 @@
 class TicketsSweeper < ActionController::Caching::Sweeper
-observe Ticket
+  observe Ticket
   
   def after_create(ticket)
     expire_fragments_for_project(ticket.project)
